@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project multi-k8s-313712 
   - gcloud config set compute/zone europe-central2-b
   - gcloud container clusters get-credentials udemy-k8s
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --pasword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t vncgrvs/react-test -f client/Dockerfile.dev ./client
 
 script:
