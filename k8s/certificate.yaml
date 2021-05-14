@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vncgrvs-com-tls
+spec:
+  secretName: vncgrvs-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: vncgrvs.com
+  dnsNames:
+    - vncgrvs.com
+    - www.vncgrvs.com
